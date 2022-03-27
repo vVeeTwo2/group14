@@ -15,15 +15,15 @@
     <div class="container">
         <div class="navbar">
             <div class="logo">
-                <img src="logo-ubuy.jpg" >
+                <a href="index.html"><img src="img/logo-ubuy.jpg"></a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="">Trang chủ</a></li>
+                    <li><a href="index.html">Trang chủ</a></li>
                     <li><a href="">Sản phẩm</a></li>
                     <li><a href="">Về chúng tôi</a></li>
                     <li><a href="">Liên hệ</a></li>
-                    <li><a href="">Tài khoản</a></li>
+                    <li><a href="account.html">Tài khoản</a></li>
                 </ul>
             </nav>
         </div>
@@ -35,7 +35,34 @@
             <a href="" class="button">Tìm hiểu thêm</a>
         </div>
         <div class="col-2">
-            <img src="home.jpg" style="width:650px;height:510px" >
+            <!--<img src="home.jpg" style="width:650px;height:510px" >-->
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                  <img src="img/home1.jpg" style="width:100%"> 
+                </div>                
+                <div class="mySlides fade">                  
+                  <img src="img/home2.jpg" style="width:100%">                  
+                </div>                
+                <div class="mySlides fade">                  
+                  <img src="img/home3.jpg" style="width:100%">                  
+                </div>
+                <div class="mySlides fade">                  
+                    <img src="img/home4.jpg" style="width:100%">                  
+                  </div>
+                  <div class="mySlides fade">                  
+                    <img src="img/home5.jpg" style="width:100%">                  
+                  </div>
+            </div>
+            <br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
         </div>
     </div>
 </div>
@@ -52,16 +79,38 @@
             </div>
             <div class="footer-col-2">
                 <h3>Cùng đón chờ những sản phẩm mới của chúng tôi trên các nền tảng mạng xã hội</h3>
-                <img src="fb-logo.png" style="width:210px;height:60px">
-                <img src="gapo-logo.png" style="width:210px;height:60px">
-                <img src="insta-logo.png" style="width:210px;height:60px">
+                <img src="img/fb-logo.png" style="width:210px;height:60px">
+                <img src="img/gapo-logo.png" style="width:210px;height:60px">
+                <img src="img/insta-logo.png" style="width:210px;height:60px">
             </div>
 
         </div>
     </div>
-
 </div>
 
+<!---slider------->
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 3000); // Change image every 2 seconds
+    }
+    </script>
+    
 
 
 </body>
